@@ -1,7 +1,8 @@
 "use client"
 
 import { useLanguage } from "../contexts/LanguageContext"
-import WorkSection from "../components/WorkSection"
+import dynamic from "next/dynamic"
+const WorkSection = dynamic(() => import("../components/WorkSection"), { ssr: false })
 import Link from "next/link"
 
 const games = [
@@ -76,15 +77,15 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8 text-center">
-        {language === "zh" ? "Passerby273的作品集" : "Passerby273's Portfolio"}
+        {language === "zh" ? "Passerby273的个人作品集" : "Passerby273's Personal Portfolio"}
       </h1>
       <p className="text-center mb-8">
         {language === "zh"
-          ? "欢迎来到我的作品集！这里展示了我开发的各种游戏和其他项目。请随意浏览并尝试它们。"
-          : "Welcome to my portfolio! Here you'll find various games and projects I've developed. Feel free to browse and try them out."}
+          ? "欢迎来到我的个人作品集！这里展示了我开发的各种有趣的游戏和项目。希望你能喜欢！"
+          : "Welcome to my personal portfolio! Here you'll find a variety of interesting games and projects I've developed. Hope you enjoy!"}
       </p>
       <WorkSection
-        title={language === "zh" ? "游戏作品" : "Game Projects"}
+        title={language === "zh" ? "我的游戏作品" : "My Game Projects"}
         works={games.map((game) => ({
           ...game,
           title: game.title[language],
@@ -92,7 +93,7 @@ export default function Home() {
         }))}
       />
       <WorkSection
-        title={language === "zh" ? "其他作品" : "Other Projects"}
+        title={language === "zh" ? "其他有趣的项目" : "Other Interesting Projects"}
         works={otherWorks.map((work) => ({
           ...work,
           title: work.title[language],
@@ -101,7 +102,7 @@ export default function Home() {
       />
       <div className="text-center mt-8">
         <Link href="/about" className="text-blue-500 hover:underline">
-          {language === "zh" ? "了解更多关于我" : "Learn more about me"}
+          {language === "zh" ? "了解更多关于我的故事" : "Learn more about my story"}
         </Link>
       </div>
     </main>
