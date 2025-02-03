@@ -1,7 +1,8 @@
 import "./globals.css"
 import { Inter } from "next/font/google"
 import Navbar from "../components/Navbar"
-import type React from "react" // Changed to a regular import
+import { LanguageProvider } from "../contexts/LanguageContext"
+import type React from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -17,10 +18,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="zh">
-      <body className={inter.className}>
-        <Navbar />
-        {children}
-      </body>
+      <LanguageProvider>
+        <body className={`${inter.className} bg-[#f5f5dc]`}>
+          <Navbar />
+          {children}
+        </body>
+      </LanguageProvider>
     </html>
   )
 }

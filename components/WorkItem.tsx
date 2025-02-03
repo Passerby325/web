@@ -18,7 +18,7 @@ export default function WorkItem({ id, title, description, link }: WorkItemProps
         rel="noopener noreferrer"
         className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
       >
-        查看项目
+        START
       </Link>
     </div>
   )
