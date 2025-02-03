@@ -25,14 +25,9 @@ const games = [
     description: "2D横向射击游戏（电脑简单版）",
     link: "https://passerby325.github.io/shooting-2d-laptop-/",
   },
+
   {
     id: 5,
-    title: "剪刀石头布",
-    description: "双人游戏",
-    link: "https://jdstb2.vercel.app/",
-  },
-  {
-    id: 6,
     title: "剪刀石头布（决斗版）",
     description: "在这个游戏内，你有5条命",
     link: "https://newheartjdstb.vercel.app/",
