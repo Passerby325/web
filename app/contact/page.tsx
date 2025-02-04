@@ -17,13 +17,9 @@ export default function Contact() {
         <ul className="list-disc list-inside">
           <li>Email: Timepasserby325@gmail.com</li>
           <li>
-          </li>{language === "zh"
-            ? "其他联系方式很快就来"
-            : "Other contact ways is coming soon"}
+          </li>{language === "zh"? "其他联系方式很快就来": "Other contact ways is coming soon"}
           <li>
-          </li>{language === "zh"
-            ? "其他联系方式很快就来"
-            : "Other contact ways is coming soon"}
+          </li>{language === "zh"? "其他联系方式很快就来": "Other contact ways is coming soon"}
         </ul>
       </div>
     </div>
