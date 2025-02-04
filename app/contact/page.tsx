@@ -19,9 +19,15 @@ export default function Contact() {
           <li>
 
           </li>
+                    {language === "zh"
+            ? "其他联系方式很快就来"
+            : "Other contact ways is coming soon"}
           <li>
            
           </li>
+                              {language === "zh"
+            ? "其他联系方式很快就来"
+            : "Other contact ways is coming soon"}
         </ul>
       </div>
     </div>
