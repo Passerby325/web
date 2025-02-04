@@ -25,7 +25,7 @@ export default function WorkItem({ id, title, description, link, language }: Wor
         rel="noopener noreferrer"
         className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
       >
-        {language === "zh" ? "查看项目" : "View Project"}
+        {language === "zh" ? "开始" : "Start"}
       </Link>
     </div>
   )
