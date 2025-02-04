@@ -1,7 +1,7 @@
 "use client"
-
 import WorkSection from "../components/WorkSection"
 import { useLanguage } from "../lib/LanguageContext"
+import PageTransition from "../components/PageTransition"
 
 const games = [
   {
@@ -109,13 +109,15 @@ export default function Home() {
   const { language } = useLanguage()
 
   return (
-    <main className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">
-        {language === "zh" ? "Passerby273的作品集" : "Passerby273's Portfolio"}
-      </h1>
-      <WorkSection title={language === "zh" ? "游戏作品" : "Game Projects"} works={games} language={language} />
-      <WorkSection title={language === "zh" ? "其他作品" : "Other Projects"} works={otherWorks} language={language} />
-    </main>
+    <PageTransition>
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-8 text-center">
+          {language === "zh" ? "Passerby273的作品集" : "Passerby273's Portfolio"}
+        </h1>
+        <WorkSection title={language === "zh" ? "游戏作品" : "Game Projects"} works={games} language={language} />
+        <WorkSection title={language === "zh" ? "其他作品" : "Other Projects"} works={otherWorks} language={language} />
+      </main>
+    </PageTransition>
   )
 }
 
