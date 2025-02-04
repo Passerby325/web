@@ -11,13 +11,8 @@ export default function About() {
       <div className="bg-white shadow-md rounded-lg p-6">
         <p className="mb-4">
           {language === "zh"
-            ? "我是一名热爱编程和游戏开发的开发者。我喜欢创造有趣和有挑战性的项目，不断学习新的技术和方法。"
-            : "I am a developer passionate about programming and game development. I enjoy creating fun and challenging projects while continuously learning new technologies and methods."}
-        </p>
-        <p>
-          {language === "zh"
-            ? "在这个作品集网站上，你可以看到我的一些项目。我希望通过这些作品展示我的技能和创造力。"
-            : "On this portfolio website, you can see some of my projects. I hope to showcase my skills and creativity through these works."}
+            ? "这是一个由不太懂编程的人仅仅使用人工智能制作的网站和游戏。"
+            : "This is a website and game made by people who don’t know much about programming, using only artificial intelligence."}
         </p>
       </div>
     </div>
