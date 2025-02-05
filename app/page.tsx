@@ -2,6 +2,8 @@
 import WorkSection from "../components/WorkSection"
 import { useLanguage } from "../lib/LanguageContext"
 import PageTransition from "../components/PageTransition"
+import styles from "../components/Navbar.module.css"
+import { useState, useCallback } from "react"
 
 const games = [
   {
@@ -107,11 +109,23 @@ const otherWorks = [
 
 export default function Home() {
   const { language } = useLanguage()
+  const [isRotating, setIsRotating] = useState(false)
+
+  const handleRotate = useCallback(() => {
+    if (!isRotating) {
+      setIsRotating(true)
+      setTimeout(() => setIsRotating(false), 1000)
+    }
+  }, [isRotating])
 
   return (
     <PageTransition>
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-8 text-center">
+        <h1
+          className={`text-3xl font-bold mb-8 text-center ${styles.rotateOnHover} ${isRotating ? styles.rotate : ""}`}
+          onClick={handleRotate}
+          onMouseEnter={handleRotate}
+        >
           {language === "zh" ? "Passerby273的作品集" : "Passerby273's Portfolio"}
         </h1>
         <WorkSection title={language === "zh" ? "游戏作品" : "Game Projects"} works={games} language={language} />

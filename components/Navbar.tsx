@@ -2,18 +2,33 @@
 
 import Link from "next/link"
 import { useLanguage } from "../lib/LanguageContext"
+import styles from "./Navbar.module.css"
+import { useState, useCallback } from "react"
 
 export default function Navbar() {
   const { language, setLanguage } = useLanguage()
+  const [isRotating, setIsRotating] = useState(false)
 
   const toggleLanguage = () => {
     setLanguage(language === "zh" ? "en" : "zh")
   }
 
+  const handleRotate = useCallback(() => {
+    if (!isRotating) {
+      setIsRotating(true)
+      setTimeout(() => setIsRotating(false), 1000)
+    }
+  }, [isRotating])
+
   return (
     <nav className="bg-gray-800 text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="text-xl font-bold">
+        <Link
+          href="/"
+          className={`text-xl font-bold ${styles.rotateOnHover} ${isRotating ? styles.rotate : ""}`}
+          onClick={handleRotate}
+          onMouseEnter={handleRotate}
+        >
           {language === "zh" ? "我的作品集" : "My Portfolio"}
         </Link>
         <ul className="flex space-x-4">
