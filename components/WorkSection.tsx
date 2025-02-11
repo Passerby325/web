@@ -11,6 +11,7 @@ interface Work {
     en: string
   }
   link: string
+  image: string
 }
 
 interface WorkSectionProps {
