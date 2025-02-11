@@ -30,7 +30,7 @@ const games = [
       en: "A 2D side-scrolling shooter game with leaderboard. How long can you survive? (Recommended for mobile)",
     },
     link: "https://passerby325.github.io/real-2d-shooting-game/",
-    image: "/placeholder.svg?height=150&width=150",
+    image: "/images/2dshoot.jpg",
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const games = [
       en: "Eliminate enemies with bullets and movement to survive!",
     },
     link: "https://passerby325.github.io/top-down-shooting-game/",
-    image: "/placeholder.svg?height=150&width=150",
+    image: "/images/top-down-shooting-game.jpg",
   },
   {
     id: 4,
@@ -56,7 +56,7 @@ const games = [
       en: "A simple version of 2D side-scrolling shooter game for PC",
     },
     link: "https://passerby325.github.io/shooting-2d-laptop-/",
-    image: "/placeholder.svg?height=150&width=150",
+    image: "/images/2dshoot.jpg",
   },
   {
     id: 5,
@@ -69,7 +69,7 @@ const games = [
       en: "Two-player game",
     },
     link: "https://jdstb2.vercel.app/",
-    image: "/placeholder.svg?height=150&width=150",
+    image: "/images/rock-paper-scissors.png",
   },
   {
     id: 6,
@@ -82,7 +82,7 @@ const games = [
       en: "In this game, you have 5 lives",
     },
     link: "https://newheartjdstb.vercel.app/",
-    image: "/placeholder.svg?height=150&width=150",
+    image: "/images/rock-paper-scissors.png",
   },
   {
     id: 7,
@@ -94,7 +94,7 @@ const games = [
       zh: "一个有些特别的走迷宫游戏，特别模式有些难",
       en: "A somewhat special maze game, the special mode is a bit difficult",
     },
-    link: "https://map2-sigma.vercel.app/", // 替换为实际的游戏链接
+    link: "https://map2-sigma.vercel.app/", 
     image: "/images/map-game.jpg",
   },
 ]
@@ -111,7 +111,7 @@ const otherWorks = [
       en: "This webpage will display 6 groups of 5 random letters. You have 20 seconds to memorize them. You can choose to show a timer. After the memory phase, you will enter your answers in the provided fields, and your accuracy will be calculated.",
     },
     link: "https://passerby325.github.io/325memorytest/",
-    image: "/placeholder.svg?height=150&width=150",
+    image: "/images/memorytesten.png",
   },
   {
     id: 2,
@@ -124,7 +124,7 @@ const otherWorks = [
       en: "This webpage displays 6 groups of 5 random letters. You have 20 seconds to memorize them. You can choose to show a timer. After the memory phase, you will enter your answers in the provided fields, and your accuracy will be calculated. If you get two or more correct, there's a mysterious surprise!!!",
     },
     link: "https://passerby325.github.io/6group-memory-test-mandarin-version-/",
-    image: "/placeholder.svg?height=150&width=150",
+    image: "/images/memorytestcn.png",
   },
 ]
 
