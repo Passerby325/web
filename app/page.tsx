@@ -126,6 +126,20 @@ const otherWorks = [
     link: "https://passerby325.github.io/6group-memory-test-mandarin-version-/",
     image: "/images/memorytestcn.png",
   },
+
+  {
+    id: 3,
+    title: {
+      zh: "英文情景对话练习",
+      en: "English conversation practice",
+    },
+    description: {
+      zh: "一个在不同情景下，用英文与其他人对话的网页。特点是有语法检查和句子建议。然后有自定义。作者觉得好玩。",
+      en: "A webpage where you can talk to other people in English in different situations. It features grammar checking and sentence suggestions. It also has customization. The author thinks it's fun.",
+    },
+    link: "https://talk-vert-alpha.vercel.app/",
+    image: "/images/talk.png",
+  },
 ]
 
 export default function Home() {
